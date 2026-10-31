@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>EcoRecycle</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<!-- Animated background shapes -->
+<div class="bg-shapes">
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+</div>
+
+<div class="container">
+
+<div class="card">
+
+<h1 class="main-title">♻ <span class="eco-highlight">Eco</span>Recycle</h1>
+
+<p class="subtitle">
+Recycle your pen • Earn eco points 🌱
+</p>
+
+<div class="features">
+<p>🌿 Reduce Plastic Waste</p>
+<p>🏆 Earn Eco Points</p>
+<p>📊 Track Recycling Impact</p>
+</div>
+
+<form method="POST">
+
+<input type="text" name="name" placeholder="Student Name" required>
+
+<input type="text" name="class" placeholder="Class" required>
+
+<input type="text" name="pen_code" placeholder="Pen Code" required>
+
+<button type="submit">Recycle Now</button>
+
+</form>
+
+{% if message %}
+<div class="message">
+{{ message }}
+</div>
+{% endif %}
+
+</div>
+
+</div>
+
+</body>
+</html>
